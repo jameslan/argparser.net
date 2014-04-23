@@ -5,6 +5,10 @@ VisualStudioVersion = 12.0.30324.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ArgParser.NET", "ArgParser.NET\ArgParser.NET.csproj", "{5A151831-6A93-42C4-97EF-AFAA53E53969}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ArgParser.NET.Tests", "ArgParser.NET.Tests\ArgParser.NET.Tests.csproj", "{CF2ADD39-020D-4E43-8254-645A6ACC337A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ArgParser.NET.Sample", "ArgParser.NET.Sample\ArgParser.NET.Sample.csproj", "{36A5DCDD-A028-4512-9416-5B8A5B2DC4A3}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +19,14 @@ Global
 		{5A151831-6A93-42C4-97EF-AFAA53E53969}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5A151831-6A93-42C4-97EF-AFAA53E53969}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5A151831-6A93-42C4-97EF-AFAA53E53969}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CF2ADD39-020D-4E43-8254-645A6ACC337A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CF2ADD39-020D-4E43-8254-645A6ACC337A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CF2ADD39-020D-4E43-8254-645A6ACC337A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CF2ADD39-020D-4E43-8254-645A6ACC337A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{36A5DCDD-A028-4512-9416-5B8A5B2DC4A3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{36A5DCDD-A028-4512-9416-5B8A5B2DC4A3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{36A5DCDD-A028-4512-9416-5B8A5B2DC4A3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{36A5DCDD-A028-4512-9416-5B8A5B2DC4A3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
