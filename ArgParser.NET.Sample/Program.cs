@@ -9,8 +9,16 @@ namespace ArgParser.NET.Sample
     class Program
     {
         static void Main(string[] args) {
-            var parser = new ArgParser {};
-            var extra = parser.Parse(args);
+            bool generalHelp;
+            bool help;
+            bool quick;
+            var options = new Options {
+                {'h', "help", "print help message", () => generalHelp = true},
+                {"create", "", () => help = true, new Options {
+                    {'q', "quick", "quick mode", () => quick = true}
+                }}
+            };
+            var extra = options.Parse(args);
         }
     }
 }
