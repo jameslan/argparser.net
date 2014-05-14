@@ -1,24 +1,52 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ArgParser.NET.Sample
 {
     class Program
     {
+        static string _server;
+        static string _username;
+        static bool _forceCheckout;
+        static bool _checkinAll;
+        static List<string> _extra;
+
         static void Main(string[] args) {
-            bool generalHelp;
-            bool help;
-            bool quick;
-            var options = new Options {
-                {'h', "help", "print help message", () => generalHelp = true},
-                {"create", "", () => help = true, new Options {
-                    {'q', "quick", "quick mode", () => quick = true}
+            var options = new OptionSet(ShortHelp) {
+                {'h', "help", "print this message", ShortHelp},
+                {"server", "server address", (string v) => _server = v},
+                {'u', "user", "user name", (string v) => _username = v},
+                {"help", "print detailed help message", new OptionSet(HelpUsage) {
+                    {"commands", "list all subcommands", new OptionSet(ListSubCommands)}
+                }},
+                {"checkout", "Checkout files", new OptionSet(Checkout) {
+                    {'f', "force", "force checkout", () => _forceCheckout = true}
+                }},
+                {"checkin", "Checkin files", new OptionSet(Checkin) {
+                    {'a', "all", "checkin all files", () => _checkinAll = true}
                 }}
             };
-            var extra = options.Parse(args);
+            _extra = options.Parse(args);
+        }
+
+        private static void Checkin() {
+            throw new NotImplementedException();
+        }
+
+        private static void Checkout() {
+            throw new NotImplementedException();
+        }
+
+        private static void ListSubCommands() {
+            throw new NotImplementedException();
+        }
+
+        private static void HelpUsage() {
+            throw new NotImplementedException();
+        }
+
+        private static void ShortHelp() {
+            throw new NotImplementedException();
         }
     }
 }
