@@ -12,41 +12,51 @@ namespace ArgParser.NET.Sample
         static List<string> _extra;
 
         static void Main(string[] args) {
-            var options = new OptionSet(ShortHelp) {
+            var options = new CommandDef(ShortHelp) {
                 {'h', "help", "print this message", ShortHelp},
                 {"server", "server address", (string v) => _server = v},
                 {'u', "user", "user name", (string v) => _username = v},
-                {"help", "print detailed help message", new OptionSet(HelpUsage) {
-                    {"commands", "list all subcommands", new OptionSet(ListSubCommands)}
+                {"help", "print detailed help message", new CommandDef(HelpUsage) {
+                    {"commands", "list all subcommands", new CommandDef(ListSubCommands)},
+                    {"options", "description of all global options", new CommandDef(ListOptions)},
                 }},
-                {"checkout", "Checkout files", new OptionSet(Checkout) {
+                {"checkout", "Checkout files", new CommandDef(Checkout) {
                     {'f', "force", "force checkout", () => _forceCheckout = true}
                 }},
-                {"checkin", "Checkin files", new OptionSet(Checkin) {
+                {"checkin", "Checkin files", new CommandDef(Checkin) {
                     {'a', "all", "checkin all files", () => _checkinAll = true}
                 }}
             };
             _extra = options.Parse(args);
+            _extra.ForEach(Console.Out.WriteLine);
+            Console.Out.WriteLine(_server);
+            Console.Out.WriteLine(_username);
+        }
+
+        private static void ListOptions() {
+            Console.Out.WriteLine("ListOptions");
         }
 
         private static void Checkin() {
-            throw new NotImplementedException();
+            Console.Out.WriteLine(_checkinAll);
+            Console.Out.WriteLine("Checkin");
         }
 
         private static void Checkout() {
-            throw new NotImplementedException();
+            Console.Out.WriteLine(_forceCheckout);
+            Console.Out.WriteLine("Checkout");
         }
 
         private static void ListSubCommands() {
-            throw new NotImplementedException();
+            Console.Out.WriteLine("ListSubCommands");
         }
 
         private static void HelpUsage() {
-            throw new NotImplementedException();
+            Console.Out.WriteLine("HelpUsage");
         }
 
         private static void ShortHelp() {
-            throw new NotImplementedException();
+            Console.Out.WriteLine("ShortHelp");
         }
     }
 }
