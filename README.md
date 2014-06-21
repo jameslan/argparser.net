@@ -1,4 +1,4 @@
-An subcommand enabled option parsing library for .NET
+A subcommand enabled option parsing library for .NET
 =============
  
  
