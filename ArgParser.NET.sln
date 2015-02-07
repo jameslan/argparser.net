@@ -1,13 +1,18 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
-VisualStudioVersion = 12.0.30324.0
+VisualStudioVersion = 12.0.31101.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ArgParser.NET", "ArgParser.NET\ArgParser.NET.csproj", "{5A151831-6A93-42C4-97EF-AFAA53E53969}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ArgParser.NET.Tests", "ArgParser.NET.Tests\ArgParser.NET.Tests.csproj", "{CF2ADD39-020D-4E43-8254-645A6ACC337A}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ArgParser.NET.Sample", "ArgParser.NET.Sample\ArgParser.NET.Sample.csproj", "{36A5DCDD-A028-4512-9416-5B8A5B2DC4A3}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{432186ED-F99A-46C0-BA16-4C7D37357EB7}"
+	ProjectSection(SolutionItems) = preProject
+		.nuget\packages.config = .nuget\packages.config
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

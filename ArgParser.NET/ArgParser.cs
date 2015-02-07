@@ -72,7 +72,9 @@ namespace ArgParser.NET {
         }
 
         private void Add(char? shortcut, string prototype, Option option) {
-            prototype = prototype.Trim();
+            if (prototype != null) {
+                prototype = prototype.Trim();
+            }
             if (shortcut == null && string.IsNullOrEmpty(prototype)) {
                 throw new OptionsDefException();
             }
