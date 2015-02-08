@@ -1,2 +1,2 @@
 language: csharp
-solution:ArgParser.NET.sln
+solution: ArgParser.NET.sln
