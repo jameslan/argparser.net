@@ -2,3 +2,5 @@ packages/
 ArgParser.NET.Sample/obj/
 ArgParser.NET.Tests/obj/
 ArgParser.NET/obj/
+ArgParser.NET.Sample/bin/
+ArgParser.NET.Tests/bin/
