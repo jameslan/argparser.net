@@ -1,2 +1,6 @@
+sudo: false
 language: csharp
 solution: ArgParser.NET.sln
+script:
+  - xbuild /p:Configuration=Release ArgParser.NET.sln
+  - mono ./packages/xunit.runner.console.*/tools/xunit.console.exe ./ArgParser.NET.Tests/bin/Release/ArgParser.NET.Tests.dll
